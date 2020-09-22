@@ -1,0 +1,17 @@
+package linklist;
+
+public class LinkListImpl implements LinkList {
+
+	@Override
+	public boolean isExist(Integer value) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void add(Node node) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

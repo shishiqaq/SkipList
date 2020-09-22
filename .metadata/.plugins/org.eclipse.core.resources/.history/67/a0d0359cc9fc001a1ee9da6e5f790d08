@@ -1,0 +1,6 @@
+package linklist;
+
+public interface LinkList {
+	public boolean isExist(Integer value);
+	public void add(Node node);
+}

@@ -1,0 +1,25 @@
+package linklist;
+
+import java.util.*;
+
+public class SkipListNode{
+    private int value;
+    public List<SkipListNode> nextNodes;
+	
+    public int getValue() {
+	return value;
+    }
+
+    public SkipListNode(int value) {
+	this.value = value;
+	nextNodes = new ArrayList<SkipListNode >();
+    }
+
+    public int level() {
+	return nextNodes.size()-1;
+    }
+
+    public String toString() {
+	return "SLN: " + value;
+    }
+}

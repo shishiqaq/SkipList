@@ -1,0 +1,54 @@
+package linklist;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+
+public class LinkListImplTest {
+
+	public static int value1 = 1;
+	public static int value2 = 2;
+	public static int value3 = 3;
+	
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+		System.out.println("JUnit test: setUpBeforeClass()...");
+	}
+
+	@AfterClass
+	public static void tearDownAfterClass() throws Exception {
+		System.out.println("JUnit test: tearDownAfterClass()...");
+	}
+
+	@Before
+	public void setUp() throws Exception {
+		System.out.println("JUnit test: setUp()...");
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		System.out.println("JUnit test: tearDown()...");
+	}
+
+	@org.junit.Test
+	public void testIsExists() {
+		LinkListImpl l = new LinkListImpl();
+		l.add(new Node(value2));
+		assertEquals(true, l.isExists(value2));
+		assertEquals(false, l.isExists(value3));
+	}
+
+	@org.junit.Test
+	public void testAdd() {
+		LinkListImpl ll = new LinkListImpl();
+		Node newNode1 = new Node(value1);
+		Node newNode2 = new Node(value2);
+		ll.add(newNode1);
+		ll.add(newNode2);
+		assertEquals(newNode1, ll.getNode(value1));
+		assertEquals(newNode2, ll.getNode(value2));
+	}
+}
